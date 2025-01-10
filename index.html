@@ -3,22 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Apps Script API Call</title>
-    <script>
-        function callAppsScript() {
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbwGdgFeH_3ZUJmtV5kD6Am4CjTmmf6Nh3eWH80PT1UiQe2-QfVOCELtgkXgflGOSDPW/exec';
-            fetch(scriptURL)
-                .then(response => response.text())
-                .then(data => alert(data))
-                .catch(error => console.error('Error:', error));
-        }
-    </script>
+    <title>Google Apps Script Link</title>
 </head>
 <body>
-    <h1>Google Apps Script API Call</h1>
-    <button onclick="callAppsScript()">Click Me</button>
+    <h1>Google Apps Script Example</h1>
+    <button onclick="window.open(https://script.google.com/macros/s/AKfycbwGdgFeH_3ZUJmtV5kD6Am4CjTmmf6Nh3eWH80PT1UiQe2-QfVOCELtgkXgflGOSDPW/exec', '_blank')">Click Me</button>
 </body>
 </html>
+
+
+
 
 
 
