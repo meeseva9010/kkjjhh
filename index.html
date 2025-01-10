@@ -3,38 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Apps Script Link</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: #4285F4;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #357AE8;
-        }
-    </style>
-</head>
-<body>
-    <h1>Open Apps Script WebApp</h1>
-    <button onclick="openScriptLink()">Click Me</button>
-
+    <title>Google Apps Script API Call</title>
     <script>
-        function openScriptLink() {
-            // Replace this with your Google Apps Script WebApp URL
-            const scriptUrl = "https://script.google.com/macros/s/AKfycbwGdgFeH_3ZUJmtV5kD6Am4CjTmmf6Nh3eWH80PT1UiQe2-QfVOCELtgkXgflGOSDPW/exec";
-            window.open(scriptUrl, "_blank");
+        function callAppsScript() {
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwGdgFeH_3ZUJmtV5kD6Am4CjTmmf6Nh3eWH80PT1UiQe2-QfVOCELtgkXgflGOSDPW/exec';
+            fetch(scriptURL)
+                .then(response => response.text())
+                .then(data => alert(data))
+                .catch(error => console.error('Error:', error));
         }
     </script>
+</head>
+<body>
+    <h1>Google Apps Script API Call</h1>
+    <button onclick="callAppsScript()">Click Me</button>
 </body>
 </html>
+
+
+    <
 
